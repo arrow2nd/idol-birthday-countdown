@@ -1,16 +1,17 @@
 import Head from 'next/head'
+import { Idol } from 'types/idol'
 
 import { site } from 'data/site'
 
 export type SEOProps = {
-  idolName: string
+  idol: Idol
   ogpImageUrl: string
 }
 
-const SEO = ({ idolName, ogpImageUrl }: SEOProps) => {
+const SEO = ({ idol, ogpImageUrl }: SEOProps) => {
   const { titleTemplate, descTemplate, url, twitterUsername } = site
 
-  const insertText = idolName ? idolName + 'さん' : 'アイマスアイドル'
+  const insertText = idol.name ? idol.name + 'さん' : 'アイマスアイドル'
 
   const title = titleTemplate.replace('%s', insertText)
   const desc = descTemplate.replace('%s', insertText)
