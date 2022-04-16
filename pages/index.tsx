@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next'
 
-const Home: NextPage = () => (
-  <h1 className="text-3xl font-bold underline">test</h1>
-);
+import Home from 'components/home'
 
-export default Home;
+const HomePage: NextPage = () => <Home idolName="杜野凛世" ogpImageUrl="" />
+
+export default HomePage
