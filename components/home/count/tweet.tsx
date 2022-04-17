@@ -1,13 +1,8 @@
-import { Idol } from 'types/idol'
-
 import { site } from 'data/site'
 
-type Props = {
-  idol: Idol
-  seconds: number
-}
+import { CountProps } from './index'
 
-const Tweet = ({ idol, seconds }: Props): JSX.Element => {
+const Tweet = ({ idol, seconds }: CountProps): JSX.Element => {
   const url = new URL('https://twitter.com/intent/tweet')
   url.searchParams.append(
     'text',

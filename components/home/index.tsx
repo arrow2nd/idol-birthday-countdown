@@ -1,20 +1,28 @@
+import { useState } from 'react'
+
 import type { ServerSideProps } from 'types/server-side-props'
 
 import SEO from 'components/common/seo'
 
-import Time from './time'
-import Tweet from './tweet'
+import { useInterval } from 'hooks/useInterval'
 
-const Home = (props: ServerSideProps): JSX.Element => {
-  const seconds = 120000
+import { calcSecondsToBirthday, getNowJstDate } from 'libs/date'
+
+import Count from './count'
+import Loading from './loading'
+
+const Home = ({ idol, ogpImageUrl }: ServerSideProps): JSX.Element => {
+  const [seconds, setSeconds] = useState<number>()
+
+  useInterval(() => {
+    setSeconds(calcSecondsToBirthday(getNowJstDate(), idol.birth))
+  })
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
-      <SEO {...props} />
+      <SEO idol={idol} ogpImageUrl={ogpImageUrl} />
       <div className="space-y-12 text-center font-default">
-        <div className="text-2xl">{`${props.idol.name}さんのお誕生日まで`}</div>
-        <Time seconds={seconds} />
-        <Tweet idol={props.idol} seconds={seconds} />
+        {seconds ? <Count idol={idol} seconds={seconds} /> : <Loading />}
       </div>
     </div>
   )

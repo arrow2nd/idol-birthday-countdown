@@ -1,9 +1,8 @@
+import { Birth } from './birth'
+
 export type Idol = {
   id: string
   name: string
   color: string
-  birth: {
-    month: number
-    day: number
-  }
+  birth: Birth
 }
