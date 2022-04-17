@@ -1,5 +1,6 @@
 import { Idol } from 'types/idol'
 
+import HPB from './hpb'
 import Time from './time'
 import Tweet from './tweet'
 
@@ -9,11 +10,10 @@ export type CountProps = {
   dateHash: string
 }
 
-const Count = (props: CountProps): JSX.Element => (
+const Count = ({ idol, seconds, dateHash }: CountProps): JSX.Element => (
   <>
-    <div className="text-2xl">{`${props.idol.name}さんのお誕生日まで`}</div>
-    <Time seconds={props.seconds} />
-    <Tweet {...props} />
+    {seconds > 0 ? <Time name={idol.name} seconds={seconds} /> : <HPB />}
+    <Tweet {...{ idol, seconds, dateHash }} />
   </>
 )
 

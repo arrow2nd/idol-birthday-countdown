@@ -2350,6 +2350,7 @@ __metadata:
     prettier: ^2.6.2
     react: 18.0.0
     react-dom: 18.0.0
+    react-rewards: ^2.0.3
     tailwindcss: ^3.0.24
     ts-node: ^10.7.0
     typescript: 4.6.3
@@ -3559,6 +3560,16 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-rewards@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "react-rewards@npm:2.0.3"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 83b2fe7e81b331fbb35ebd13f752cb765a5a1790579f61a88cdce8da28fc99d09430042f2a6bd517c1908ad0462d58840742c13be49497af000dfc4d2fc8d57f
   languageName: node
   linkType: hard
 
