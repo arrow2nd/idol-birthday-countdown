@@ -2,7 +2,7 @@ import { writeFileSync } from 'fs'
 
 import { Idol } from 'types/idol'
 
-import { getBrandColor } from './color'
+import { getBrandColor, isWhitishColor } from './color'
 import { fetchIdolData } from './fetch'
 
 /** SPARQLクエリ (全アイドルの誕生日を取得) */
@@ -30,13 +30,16 @@ ORDER BY ?name
 
   const idols: Idol[] = data.map((e): Idol => {
     const id = e.d.value.match(/detail\/(.+)$/)![1].toLowerCase()
-    const color = `#${e.color?.value || getBrandColor(e.brand.value)}`
+    const hex = `#${e.color?.value || getBrandColor(e.brand.value)}`
     const birth = e.birthdate.value.match(/--(?<month>\d+)-(?<day>\d+)/)!
 
     return {
       id,
       name: e.name.value,
-      color,
+      color: {
+        hex,
+        isWhitish: isWhitishColor(hex)
+      },
       birth: {
         month: parseInt(birth.groups!.month),
         day: parseInt(birth.groups!.day)

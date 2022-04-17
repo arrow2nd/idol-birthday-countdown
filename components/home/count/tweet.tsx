@@ -29,10 +29,14 @@ const Tweet = ({ idol, seconds, dateHash }: CountProps): JSX.Element => {
 
   return (
     <a
-      className="inline-block px-12 py-1 text-lg text-white rounded-full shadow-md cursor-pointer hover:brightness-75 transition-all"
+      className={`inline-block px-12 py-1 text-lg ${
+        idol.color.isWhitish
+          ? 'text-black border border-gray-300'
+          : 'text-white'
+      } rounded-full shadow-md cursor-pointer hover:brightness-75 transition-all`}
       onClick={handleClick}
       ref={linkRef}
-      style={{ backgroundColor: idol.color }}
+      style={{ backgroundColor: idol.color.hex }}
     >
       ツイート
     </a>
