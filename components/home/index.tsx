@@ -1,9 +1,11 @@
-import SEO, { SEOProps } from 'components/common/seo'
+import type { ServerSideProps } from 'types/server-side-props'
+
+import SEO from 'components/common/seo'
 
 import Time from './time'
 import Tweet from './tweet'
 
-const Home = (props: SEOProps): JSX.Element => {
+const Home = (props: ServerSideProps): JSX.Element => {
   const seconds = 120000
 
   return (

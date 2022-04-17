@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import { Idol } from 'types/idol'
+
+import type { Idol } from 'types/idol'
 
 import { site } from 'data/site'
 
-export type SEOProps = {
+type SEOProps = {
   idol: Idol
   ogpImageUrl: string
 }

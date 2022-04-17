@@ -9,7 +9,9 @@
   "arrowParens": "always",
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
+    "^types/(.*)$",
     "^components/(.*)$",
+    "^libs/(.*)$",
     "^data/(.*)$",
     "^[./]"
   ],
