@@ -11,7 +11,11 @@ import { calcSecondsToBirthday, getNowJstDate } from 'libs/date'
 import Count from './count'
 import Loading from './loading'
 
-const Home = ({ idol, ogpImageUrl }: ServerSideProps): JSX.Element => {
+const Home = ({
+  idol,
+  ogpImageUrl,
+  dateHash
+}: ServerSideProps): JSX.Element => {
   const [seconds, setSeconds] = useState<number>()
 
   useInterval(() => {
@@ -22,7 +26,7 @@ const Home = ({ idol, ogpImageUrl }: ServerSideProps): JSX.Element => {
     <div className="flex flex-col justify-center items-center min-h-screen">
       <SEO idol={idol} ogpImageUrl={ogpImageUrl} />
       <div className="space-y-12 text-center font-default">
-        {seconds ? <Count idol={idol} seconds={seconds} /> : <Loading />}
+        {seconds ? <Count {...{ idol, seconds, dateHash }} /> : <Loading />}
       </div>
     </div>
   )

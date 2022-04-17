@@ -6,13 +6,14 @@ import Tweet from './tweet'
 export type CountProps = {
   idol: Idol
   seconds: number
+  dateHash: string
 }
 
-const Count = ({ idol, seconds }: CountProps): JSX.Element => (
+const Count = (props: CountProps): JSX.Element => (
   <>
-    <div className="text-2xl">{`${idol.name}さんのお誕生日まで`}</div>
-    <Time seconds={seconds} />
-    <Tweet idol={idol} seconds={seconds} />
+    <div className="text-2xl">{`${props.idol.name}さんのお誕生日まで`}</div>
+    <Time seconds={props.seconds} />
+    <Tweet {...props} />
   </>
 )
 

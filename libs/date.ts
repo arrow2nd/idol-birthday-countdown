@@ -47,3 +47,12 @@ export function calcSecondsToBirthday(date: Date, birth: Birth): number {
 
   return Math.floor((nextBirthday.getTime() - date.getTime()) / 1000)
 }
+
+/**
+ * Dateオブジェクトから日付文字列を作成
+ * @param date Dateオブジェクト
+ * @returns 日付文字列
+ */
+export function createDateString(date: Date): string {
+  return [date.getFullYear(), date.getMonth() + 1, date.getDate()].join('')
+}
