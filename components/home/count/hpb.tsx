@@ -1,7 +1,5 @@
 import { useReward } from 'react-rewards'
 
-import { Idol } from 'types/idol'
-
 type Props = {
   idolName: string
 }
@@ -27,9 +25,11 @@ const HPB = ({ idolName }: Props): JSX.Element => {
         balloonsReward()
       }}
     >
-      <p>{`${idolName}さんは`}</p>
-      <p className="text-5xl md:text-6xl">本日がお誕生日</p>
-      <p>です！！！🎉🎉🎉</p>
+      <div className="text-left space-y-4">
+        <p>{`${idolName}さんは`}</p>
+        <p className="text-5xl md:text-6xl">本日がお誕生日</p>
+        <p>です！！！🎉🎉🎉</p>
+      </div>
       <span id="confettiReward" />
       <span id="balloonsReward" />
     </div>
