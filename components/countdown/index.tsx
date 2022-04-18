@@ -8,10 +8,10 @@ import { useInterval } from 'hooks/useInterval'
 
 import { calcSecondsToBirthday, getNowJstDate } from 'libs/date'
 
-import Count from './count'
+import Counter from './counter'
 import Loading from './loading'
 
-const Home = ({
+const CountDown = ({
   idol,
   ogpImageUrl,
   dateHash
@@ -37,7 +37,7 @@ const Home = ({
       <SEO idol={idol} ogpImageUrl={ogpImageUrl} />
       <div className="space-y-12 text-center font-default">
         {typeof seconds !== 'undefined' ? (
-          <Count {...{ idol, seconds, dateHash }} />
+          <Counter {...{ idol, seconds, dateHash }} />
         ) : (
           <Loading />
         )}
@@ -46,4 +46,4 @@ const Home = ({
   )
 }
 
-export default Home
+export default CountDown

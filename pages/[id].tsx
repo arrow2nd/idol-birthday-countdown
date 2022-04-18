@@ -8,7 +8,7 @@ import type {
 import type { ServerSideProps } from 'types/server-side-props'
 
 import NotFound from 'components/404'
-import Home from 'components/home'
+import CountDown from 'components/countdown'
 
 import { createDateString, getNowJstDate } from 'libs/date'
 import { md5 } from 'libs/hash'
@@ -20,10 +20,10 @@ import { parseQuery } from 'libs/parse'
 
 type Props = InferGetServerSidePropsType<typeof getServerSideProps>
 
-const HomePage: NextPage<Props> = (props) =>
-  props ? <Home {...props} /> : <NotFound />
+const CountDownPage: NextPage<Props> = (props) =>
+  props ? <CountDown {...props} /> : <NotFound />
 
-export default HomePage
+export default CountDownPage
 
 // ----------------------------------
 

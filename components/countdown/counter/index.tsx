@@ -10,7 +10,7 @@ export type CountProps = {
   dateHash: string
 }
 
-const Count = ({ idol, seconds, dateHash }: CountProps): JSX.Element => (
+const Counter = ({ idol, seconds, dateHash }: CountProps): JSX.Element => (
   <>
     {seconds > 0 ? (
       <Time name={idol.name} seconds={seconds} />
@@ -21,4 +21,4 @@ const Count = ({ idol, seconds, dateHash }: CountProps): JSX.Element => (
   </>
 )
 
-export default Count
+export default Counter
