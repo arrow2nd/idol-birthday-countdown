@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import type { ServerSideProps } from 'types/server-side-props'
 
+import Layout from 'components/common/layout'
 import SEO from 'components/common/seo'
 
 import { useInterval } from 'hooks/useInterval'
@@ -33,7 +34,7 @@ const CountDown = ({
   }
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen select-none">
+    <Layout>
       <SEO idol={idol} ogpImageUrl={ogpImageUrl} />
       <div className="space-y-12 text-center font-default">
         {typeof seconds !== 'undefined' ? (
@@ -42,7 +43,7 @@ const CountDown = ({
           <Loading />
         )}
       </div>
-    </div>
+    </Layout>
   )
 }
 

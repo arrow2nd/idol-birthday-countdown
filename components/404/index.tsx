@@ -1,7 +1,9 @@
+import Layout from 'components/common/layout'
+
 const NotFound = (): JSX.Element => (
-  <div>
-    <h1>404 Notfound</h1>
-  </div>
+  <Layout>
+    <span className="text-xl">404 Notfound</span>
+  </Layout>
 )
 
 export default NotFound
