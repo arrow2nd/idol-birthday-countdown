@@ -23,13 +23,15 @@ const CountDown = ({
   const { state, stop } = useInterval(() => {
     // ハッシュを再計算するために日付が変わったらリロード
     if (getNowJstDate().getDate() !== prevDate) {
+      console.log('reload')
       window.location.reload()
     }
 
     setSeconds(calcSecondsToBirthday(getNowJstDate(), idol.birth))
   })
 
-  if (state === 'running' && typeof seconds !== 'undefined' && seconds <= 0) {
+  // お誕生日ならカウントダウンを止める
+  if (state === 'running' && typeof seconds !== 'undefined' && seconds < 0) {
     stop()
   }
 
