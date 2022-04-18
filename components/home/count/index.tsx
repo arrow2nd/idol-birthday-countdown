@@ -12,7 +12,11 @@ export type CountProps = {
 
 const Count = ({ idol, seconds, dateHash }: CountProps): JSX.Element => (
   <>
-    {seconds > 0 ? <Time name={idol.name} seconds={seconds} /> : <HPB />}
+    {seconds > 0 ? (
+      <Time name={idol.name} seconds={seconds} />
+    ) : (
+      <HPB idolName={idol.name} />
+    )}
     <Tweet {...{ idol, seconds, dateHash }} />
   </>
 )
