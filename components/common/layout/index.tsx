@@ -3,7 +3,7 @@ type Props = {
 }
 
 const Layout = ({ children }: Props): JSX.Element => (
-  <div className="flex flex-col justify-center items-center min-h-screen select-none">
+  <div className="flex flex-col justify-center items-center p-8 min-h-screen select-none">
     {children}
   </div>
 )
