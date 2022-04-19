@@ -6,6 +6,11 @@ type ParsedQuery = {
   timestamp: number
 }
 
+/**
+ * クエリパラメータから文字列の値を取得
+ * @param param クエリパラメータ
+ * @returns 文字列
+ */
 function getParam(param: string | string[] | undefined) {
   return Array.isArray(param) ? undefined : param
 }
