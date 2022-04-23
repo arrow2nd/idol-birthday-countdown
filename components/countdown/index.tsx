@@ -36,7 +36,7 @@ const CountDown = ({
   }
 
   return (
-    <Layout>
+    <Layout navi>
       <SEO idol={idol} ogpImageUrl={ogpImageUrl} />
       <div className="space-y-12 text-center font-default">
         {typeof seconds !== 'undefined' ? (

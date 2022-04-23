@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import { GiPartyPopper } from 'react-icons/gi'
 import Select from 'react-select'
 
 import { Option } from 'types/select'
@@ -16,7 +17,8 @@ const Home = ({ options }: Props): JSX.Element => {
   return (
     <Layout>
       <SEO />
-      <div className="font-bold text-3xl">
+      <div className="flex flex-row items-center font-bold text-3xl">
+        <GiPartyPopper className="mr-2 text-4xl" />
         アイマスアイドルのお誕生日まで...？
       </div>
       <p className="mt-2 text-gray-700">
