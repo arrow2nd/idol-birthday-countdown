@@ -485,7 +485,7 @@ export const idols: Idol[] = [
     id: 'aya',
     name: '亜夜',
     color: {
-      hex: '#FF74B8',
+      hex: '#3F3538',
       isWhitish: false
     },
     birth: {
@@ -893,7 +893,7 @@ export const idols: Idol[] = [
     id: 'futaba_anzu',
     name: '双葉杏',
     color: {
-      hex: '#F19DB4',
+      hex: '#F8A3BC',
       isWhitish: true
     },
     birth: {
@@ -1061,8 +1061,8 @@ export const idols: Idol[] = [
     id: 'jougasaki_mika',
     name: '城ヶ崎美嘉',
     color: {
-      hex: '#F4982B',
-      isWhitish: false
+      hex: '#FF9E1B',
+      isWhitish: true
     },
     birth: {
       month: 11,
@@ -1397,7 +1397,7 @@ export const idols: Idol[] = [
     id: 'abe_nana',
     name: '安部菜々',
     color: {
-      hex: '#E64A79',
+      hex: '#EF4A81',
       isWhitish: false
     },
     birth: {
@@ -3017,7 +3017,7 @@ export const idols: Idol[] = [
     id: 'kanzaki_ranko',
     name: '神崎蘭子',
     color: {
-      hex: '#7E3188',
+      hex: '#84329B',
       isWhitish: false
     },
     birth: {
@@ -3497,8 +3497,8 @@ export const idols: Idol[] = [
     id: 'shika',
     name: '詩花',
     color: {
-      hex: '#FF74B8',
-      isWhitish: false
+      hex: '#E5F9E4',
+      isWhitish: true
     },
     birth: {
       month: 9,
@@ -3509,7 +3509,7 @@ export const idols: Idol[] = [
     id: 'moroboshi_kirari',
     name: '諸星きらり',
     color: {
-      hex: '#F8CA02',
+      hex: '#E0E101',
       isWhitish: true
     },
     birth: {
@@ -3761,7 +3761,7 @@ export const idols: Idol[] = [
     id: 'takagaki_kaede',
     name: '高垣楓',
     color: {
-      hex: '#33D5AC',
+      hex: '#47D7AC',
       isWhitish: false
     },
     birth: {
