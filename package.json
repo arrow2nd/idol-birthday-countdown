@@ -17,7 +17,7 @@
     "react-dom": "18.0.0",
     "react-icons": "^4.3.1",
     "react-rewards": "^2.0.3",
-    "react-select": "^5.3.0"
+    "react-select": "^5.3.2"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
