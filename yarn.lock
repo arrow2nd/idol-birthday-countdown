@@ -2621,7 +2621,7 @@ __metadata:
     react: 18.0.0
     react-dom: 18.0.0
     react-icons: ^4.4.0
-    react-rewards: ^2.0.3
+    react-rewards: ^2.0.4
     react-select: ^5.3.2
     tailwindcss: ^3.0.24
     ts-node: ^10.8.0
@@ -3911,13 +3911,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-rewards@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "react-rewards@npm:2.0.3"
+"react-rewards@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "react-rewards@npm:2.0.4"
   peerDependencies:
-    react: ^15.0.0 || ^16.0.0 || ^17.0.0
-    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0
-  checksum: 83b2fe7e81b331fbb35ebd13f752cb765a5a1790579f61a88cdce8da28fc99d09430042f2a6bd517c1908ad0462d58840742c13be49497af000dfc4d2fc8d57f
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 7796d4bab724b69bf0263c0964d2ef3e41ef93bca7d332c4652f39cd2cc4054f9b19f7dac93ec5734632377c5e77d2f5251fb0992aaeeed92fde132f5ea5fd68
   languageName: node
   linkType: hard
 
